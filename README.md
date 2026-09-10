@@ -2,6 +2,8 @@
 
 *Built in SQL Server and Power BI from Metropolitan Police and Office for National Statistics open data. · Mubtasin Q.*
 
+Analysis of London shoplifting patterns from 2023–2025 to identify borough hotspots, seasonal trends and priorities for retail security. SQL Server was used to store, clean and transform the data, and Power BI to visualise the findings.
+
 ## Contents
 
 - [Project Background](#project-background)
@@ -23,7 +25,7 @@
   - [4. The largest improvement coincided with a change in incident reporting](#4-the-largest-improvement-coincided-with-a-change-in-incident-reporting)
   - [5. Summer peaks help retailers plan ahead](#5-summer-peaks-help-retailers-plan-ahead)
 - [Recommendations](#recommendations)
-  - [1. Hold security spend steady, with the option to scale back](#1-hold-security-spend-steady-with-the-option-to-scale-back)
+  - [1. Maintain security spending and scale back after a sustained fall in shoplifting](#1-maintain-security-spending-and-scale-back-after-a-sustained-fall-in-shoplifting)
   - [2. Where to direct the spend across boroughs](#2-where-to-direct-the-spend-across-boroughs)
   - [3. Fund guarding and reporting first; test facial recognition before expanding](#3-fund-guarding-and-reporting-first-test-facial-recognition-before-expanding)
   - [4. Front-load resourcing into July and August](#4-front-load-resourcing-into-july-and-august)
@@ -82,7 +84,7 @@ The Food Foundation's tracking shows that food insecurity among UK households wi
 
 | **Insight Area** | **Key Findings** | **Strategic Recommendation** |
 | --- | --- | --- |
-| **Should retailers increase security spending?** | London's recorded shoplifting reached approximately 92,000 incidents in 2025, an all-time high. The Crime and Policing Act may bring volumes down in 2026, but its impact remains to be seen. | Retailers should increase security spending now, while remaining ready to scale it back if more effective policing reduces local theft. |
+| **Should retailers increase security spending?** | London's recorded shoplifting reached approximately 92,000 incidents in 2025, an all-time high. The Crime and Policing Act may bring volumes down in 2026, but its impact remains to be seen. | Maintain current security spending while shoplifting remains high. Review local theft trends regularly and keep budgets flexible so spending can be scaled back once there is a sustained decline. |
 | **Where should retailers invest their security resources?** | Westminster, Camden and Newham remain high-shoplifting boroughs, while Lambeth and Tower Hamlets show emerging pressure. The retail index also identifies Lambeth and Bromley, among others, as boroughs with high shoplifting levels relative to their retail footprint. | Maintain strong security coverage in established hotspots and respond early to emerging ones. Prioritise additional resources in boroughs with high shoplifting levels relative to their number of retail premises. |
 | **What should retailers invest in and how?** | Retail security investment covers personnel, CCTV, anti-theft devices and body-worn cameras. Better incident reporting can also support coordination with police. | Strengthen guarding, staff training and theft-prevention tools, supported by coordinated police reporting. Test newer technology such as facial recognition through limited trials, assessing outcomes, costs and implementation requirements before wider rollout. |
 | **Seasonal shoplifting patterns** | July and August consistently ranked among the highest months for recorded shoplifting across 2023–2025, providing a basis for seasonal security planning. | Plan additional security coverage ahead of peak months. Increase staffing, refresh staff briefings and coordinate with local police to prepare for the recurring summer rise. |
@@ -112,9 +114,9 @@ Data quality checks covered missing values, duplicate crime IDs, unmatched borou
 
 The repository holds the SQL behind the pipeline. The main parts are:
 
-- [**Raw table scripts**](https://github.com/Muba730/london-shoplifting-analysis/blob/7309fb3809eb9b6d934ad68eee8a0f71c08f0c80/sql/01_create_and_load_raw_tables.sql) — create the raw tables and load the MPS crime, ONS retail and postcode source files. *(*
-- [**Cleaned table scripts**](https://github.com/Muba730/london-shoplifting-analysis/blob/7309fb3809eb9b6d934ad68eee8a0f71c08f0c80/sql/02_clean_and_model_data.sql) — filter records to shoplifting, standardise the date fields, resolve the 2011 and 2021 postcode codes and build the borough dimension. *(link to add)*
-- [**Data quality checks**](https://github.com/Muba730/london-shoplifting-analysis/blob/7309fb3809eb9b6d934ad68eee8a0f71c08f0c80/sql/03_data_quality_checks.sql) — validate row counts, duplicate crime IDs, unmatched boroughs and retail counts before analysis. *(link to add)*
+- [**Raw table scripts**](https://github.com/Muba730/london-shoplifting-analysis/blob/7309fb3809eb9b6d934ad68eee8a0f71c08f0c80/sql/01_create_and_load_raw_tables.sql) — create the raw tables and load the MPS crime, ONS retail and postcode source files.
+- [**Cleaned table scripts**](https://github.com/Muba730/london-shoplifting-analysis/blob/7309fb3809eb9b6d934ad68eee8a0f71c08f0c80/sql/02_clean_and_model_data.sql) — filter records to shoplifting, standardise the date fields, resolve the 2011 and 2021 postcode codes and build the borough dimension.
+- [**Data quality checks**](https://github.com/Muba730/london-shoplifting-analysis/blob/7309fb3809eb9b6d934ad68eee8a0f71c08f0c80/sql/03_data_quality_checks.sql) — validate row counts, duplicate crime IDs, unmatched boroughs and retail counts before analysis.
 
 ## London Shoplifting Dashboard
 
@@ -172,9 +174,13 @@ July and August appeared among the three highest months in every year analysed (
 
 # Recommendations
 
-## 1. Hold security spend steady, with the option to scale back
+## 1. Maintain security spending and scale back after a sustained fall in shoplifting
 
-London's record shoplifting levels support continued investment in security staffing, monitoring and theft prevention. However, the temptation to pause on security investment is understandable. Security budgets have grown steadily against what still looks like a rising problem, and a retailer might reasonably hope that the Retail Crime Action Plan and the Crime and Policing Act will bring volumes down without further spending on their part. The risk is that this relief is neither guaranteed nor quick. The 2025 slowdown did not reduce volumes, it only stopped them rising at a faster growth rate, and enforcement capacity varies by borough. Holding coverage while the policy effect is tested is the lower-risk position, provided the commitment is structured so it can be scaled back once that effect is visible.
+London’s shoplifting total remained at a record high in 2025, even though the rate of increase slowed. Retailers should therefore maintain their current security coverage.
+
+The Retail Crime Action Plan and the Crime and Policing Act may help reduce theft, but the timing and impact remain uncertain. It is also unclear whether shoplifting will return to the lower levels seen in the early post-pandemic years.
+
+Retailers should keep budgets flexible, review local theft trends regularly and consider reducing spending once there is a sustained fall in shoplifting.
 
 ## 2. Where to direct the spend across boroughs
 
