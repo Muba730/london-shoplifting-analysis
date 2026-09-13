@@ -1,7 +1,5 @@
 # Mapping Retail Crime in London: Shoplifting Patterns, Risk Hotspots and Strategic Guidance for Retailers (2023–2025)
 
-*Built in SQL Server and Power BI from Metropolitan Police and Office for National Statistics open data. · Mubtasin Q.*
-
 Analysis of London shoplifting patterns from 2023–2025 to identify borough hotspots, seasonal trends and priorities for retail security. SQL Server was used to store, clean and transform the data, and Power BI to visualise the findings.
 
 ## Contents
