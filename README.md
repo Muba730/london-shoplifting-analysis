@@ -50,7 +50,7 @@ The project brings these findings together to inform three decisions: whether to
 
 The British Retail Consortium's (BRC) 2025 survey estimated UK customer-theft losses of a **record high** £2.2 billion and prevention spending of £1.8 billion, up from £1.2 billion in the previous survey (Figure 1). These estimates cover 2023/24. They show the wider challenge for retailers, who face both stock losses and the cost of prevention. That spending has risen because the UK has been recording historically high levels of shoplifting, and London has followed the same trend.
 
-![                                                           Figure 1. UK customer-theft losses against prevention spending, 2023/24.](docs/notion-images/image-1.png)
+![                                                           Figure 1. UK customer-theft losses against prevention spending, 2023/24.](charts/image-1.png)
 
 *Figure 1. UK customer-theft losses against prevention spending, 2023/24.*
 
@@ -60,7 +60,7 @@ The British Retail Consortium's (BRC) 2025 survey estimated UK customer-theft lo
 
 London recorded approximately 92,000 shoplifting offences in 2025, the highest annual total on record. The pace of that rise has changed, though: volumes climbed 55% between 2023 and 2024, then slowed to 2% in 2025 (Figure 2).
 
-![                                                                                           Figure 2. London shoplifting offences by year, 2020–2025.](docs/notion-images/image-2.png)
+![                                                                                           Figure 2. London shoplifting offences by year, 2020–2025.](charts/image-2.png)
 
 *Figure 2. London shoplifting offences by year, 2020–2025.*
 
@@ -71,7 +71,7 @@ London's shoplifting has stopped accelerating while remaining at a record level.
 
 Several factors could contribute, including the pressure that living costs, unemployment or falling real wages can place on household budgets. However, the food-insecurity figures suggest that economic hardship alone is unlikely to explain the pattern (Figure 3).
 
-![                                                  Figure 3. UK households experiencing food insecurity, with and without children, 2020–2025.](docs/notion-images/image-3.png)
+![                                                  Figure 3. UK households experiencing food insecurity, with and without children, 2020–2025.](charts/image-3.png)
 
 *Figure 3. UK households experiencing food insecurity, with and without children, 2020–2025.*
 
@@ -98,7 +98,7 @@ The ShopliftingDB model was built in SQL Server using four core tables. The crim
 - **`London_Postcodes`:** postcode and geographic references used to assign crime records to boroughs.
 - **`borough_dim`:** one borough reference per `district_code`, linking the crime and retail tables consistently.
 
-![                                             Figure 4. Entity relationship diagram: district_code links the crime and retail tables through borough_dim.](docs/notion-images/image-4.png)
+![                                             Figure 4. Entity relationship diagram: district_code links the crime and retail tables through borough_dim.](charts/image-4.png)
 
 *Figure 4. Entity relationship diagram: district_code links the crime and retail tables through borough_dim.*
 
@@ -118,7 +118,7 @@ The repository holds the SQL behind the pipeline. The main parts are:
 
 ## London Shoplifting Dashboard
 
-![                                                                                                                           ](docs/notion-images/image-5.png)
+![                                                                                                                           ](charts/image-5.png)
 
 **Link to Power BI public:** [London Shoplifting Insights Dashboard](https://app.powerbi.com/links/PT3idvF7jb?ctid=cba74438-244f-497c-8cf7-253877d268fb&pbi_source=linkShare)
 
@@ -131,13 +131,13 @@ A plateau at a record high argues for sustaining current security investment and
 
 ## 2. Where volumes sit: three boroughs dominate
 
-![                                                                       Figure 5. Top five London boroughs by shoplifting offences, 2023–2025.](docs/notion-images/image-6.png)
+![                                                                       Figure 5. Top five London boroughs by shoplifting offences, 2023–2025.](charts/image-6.png)
 
 *Figure 5. Top five London boroughs by shoplifting offences, 2023–2025.*
 
 Westminster, Newham and Camden have appeared in the top five every year since 2023 (Figure 5). Westminster is a long way clear of the rest, at roughly 8,000 incidents in 2025, about 70% ahead of second-placed Newham. Oxford Street, Covent Garden, Westfield Stratford and Camden Market all sit within those three boroughs, so footfall is part of the explanation.
 
-![                                                                             Figure 6. Top five London boroughs by retail premises count, 2025.](docs/notion-images/image-7.png)
+![                                                                             Figure 6. Top five London boroughs by retail premises count, 2025.](charts/image-7.png)
 
 *Figure 6. Top five London boroughs by retail premises count, 2025.*
 
@@ -149,13 +149,13 @@ Volume alone leaves a gap. Retailers should consider both the total number of sh
 Resources will naturally go to the stores already reporting the most theft. The ratio, measured here as the Shoplifting-to-Retail Index, earns its place at the margin, where two boroughs record similar volumes and the question is which to prioritise. The one carrying that volume across fewer shops is under greater pressure per store.
 The table groups boroughs into three tiers by index score (Figure 7). Westminster, which records the most incidents in London by a wide margin, sits in the middle tier: across 4,650 retail units it scores 1.72, close to the London average, so per store the pressure is ordinary. Camden falls into the low tier at 1.28, alongside Barnet and Richmond upon Thames. The high tier is led by Lambeth, where 3,170 incidents across only 1,300 units give a score of 2.44, with Newham, Havering, Bromley and Greenwich close behind.<br>
 
-![                                      Figure 7. London boroughs grouped into low, medium and high tiers by Shoplifting-to-Retail Index.](docs/notion-images/image-8.png)
+![                                      Figure 7. London boroughs grouped into low, medium and high tiers by Shoplifting-to-Retail Index.](charts/image-8.png)
 
 *Figure 7. London boroughs grouped into low, medium and high tiers by Shoplifting-to-Retail Index.*
 
 ## 4. The largest improvement coincided with a change in incident reporting
 
-![                                                                   Figure 8. Largest borough rank shifts for shoplifting offences, 2023 to 2025.](docs/notion-images/image-9.png)
+![                                                                   Figure 8. Largest borough rank shifts for shoplifting offences, 2023 to 2025.](charts/image-9.png)
 
 *Figure 8. Largest borough rank shifts for shoplifting offences, 2023 to 2025.*
 
@@ -166,7 +166,7 @@ Lambeth and Tower Hamlets moved in the opposite direction, each adding more than
 
 July and August appeared among the three highest months in every year analysed (Figure 9). August ranked first in 2023 and 2025, while October led in 2024. This supports preparing additional summer security coverage while maintaining monitoring throughout the year. Higher visitor numbers and busier shops may help explain the summer pattern
 
-![                                             Figure 9. Three highest shoplifting months by year, 2023–2025.](docs/notion-images/image-10.png)
+![                                             Figure 9. Three highest shoplifting months by year, 2023–2025.](charts/image-10.png)
 
 *Figure 9. Three highest shoplifting months by year, 2023–2025.*
 
